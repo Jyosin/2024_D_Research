@@ -5,7 +5,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from scipy.interpolate import griddata
 
 # 加载map数据
-with open('/Users/wangruqin/Desktop/teacher_student/map_epoch_50_step_20_1.pkl', 'rb') as f:
+with open('result/vit_untrained_0.01_50.pkl', 'rb') as f:
     map = pickle.load(f)
 
 # 准备绘图数据
@@ -47,4 +47,5 @@ ax.scatter([0], [0], np.min(Z)-0.1, color='red', s=50)
 # 设置Z轴的范围，以便我们可以看到等高线图
 ax.set_zlim(np.min(Z)-0.1, np.max(Z))
 
-plt.show()
+plt.savefig("result/vit_untrained_0.01_50.pkl.png")
+print("0.01")
